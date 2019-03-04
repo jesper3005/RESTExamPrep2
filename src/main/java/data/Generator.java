@@ -18,8 +18,8 @@ import java.util.Random;
  */
 public class Generator {
 
-    private static final String[] FNAMES = {"Jesper", "Christian", "Mads", "Lars", "Line"};
-    private static final String[] LNAMES = {"Christensen", "Larsen", "Jensen", "Hartmann", "Pedersen"};
+    private static final String[] FNAMES = {"Jesper", "Christian", "Mads", "Lars", "Line", "Abdul", "Ivor", "Adam", "Nikolaj", "Jens", "James", "Liam", "Arthus", "Kel'Thuzard"};
+    private static final String[] LNAMES = {"Christensen", "Larsen", "Jensen", "Hartmann", "Pedersen", "Hansen", "Petersen", "Mathiasen", "Gudrundsen", "Kavazaki"};
 
     public static String generateData(int sampleAmount, int startID) {
         List<Person> persons = new ArrayList();
@@ -29,8 +29,8 @@ public class Generator {
         
         int id = startID;
         for (int i = 0; i < sampleAmount; i++) {
-            int fName = rand.nextInt(5);
-            int lName = rand.nextInt(5);
+            int fName = rand.nextInt(FNAMES.length);
+            int lName = rand.nextInt(LNAMES.length);
             int age = rand.nextInt(54) + 17;
 
             persons.add(new Person(id, FNAMES[fName], LNAMES[lName], age));
