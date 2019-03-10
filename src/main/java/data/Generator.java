@@ -25,8 +25,7 @@ public class Generator {
         List<Person> persons = new ArrayList();
         Random rand = new Random();
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        
-        
+
         int id = startID;
         for (int i = 0; i < sampleAmount; i++) {
             int fName = rand.nextInt(FNAMES.length);
@@ -38,7 +37,7 @@ public class Generator {
         }
         return gson.toJson(persons);
     }
-    
+
     public static void main(String[] args) {
         System.out.println(generateData(50, 1));
     }
